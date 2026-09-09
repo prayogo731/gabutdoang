@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pengacara.web</title>
+
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: rgba(255, 0, 200, 0.116);
+            
+        }
+
+        #papan {
+            z-index: 1;
+            position: fixed;
+            top: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.267) 0px 0px 2px 2px;
+            width: 250px;
+            padding: 20px;
+            background-color: rgba(34, 88, 136, 0.116);
+        }
+
+        .pesan {
+            border-radius: 30px;
+            background-color: rgba(15, 14, 14, 0.925);
+            color: rgb(243, 240, 240);
+            height: 100px;
+            width: 300px;
+            z-index: 999;
+            position: relative;
+            top: 200px;
+            text-align: center;
+            padding: 40px;
+            right: 100px;
+            font-family: monospace;
+            display: none;
+
+        }
+        
+        .adv {
+            height: 220px;
+            width: 200px;
+            position: relative;
+            top: 200px;
+            left: 200px;
+            z-index: 2;
+        }
+
+        #btnhvr:hover {
+            background-color: rgb(241, 86, 255);
+            transform: scale(1.1);
+        }
+
+        #login {
+            border-radius: 10px;
+            background-color: rgba(54, 42, 165, 0.397);
+        }
+
+        #login:hover {
+            background-color: rgba(42, 165, 58, 0.397);
+        }
+
+        #id, #user {
+            border-radius: 5px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="papan">
+        <p style="color: rgb(141, 14, 180);" >PENGACARA.WEB</p>
+        <br>
+
+        <input type="text" id="user" placeholder="user">
+        <input type="text" id="pw" placeholder="password">
+        
+
+        <button onclick="login()" id="login">login</button>
+    </div>
+
+    <!--stiker-->
+        <img src ="adv-removebg-preview.png" alt="" class="adv">
+
+    <!--/stiker-->   
+        <p id="?" style="left: 90px; top: 70px;  position: relative;  font-size:  70px; color: rgb(244, 127, 255);">?</p>
+
+    <div class="pesan" id="pesan">
+        <p style="font-size: 20px;">ayo pikirkan secara logika gimana caranya user pw nya kok salah bos</p>
+        <button onclick="pesan()" style="font-size: 20px; width: 70px; border-radius: 5px;" id="btnhvr">ok</button>
+    </div>
+
+    <script>
+
+         function login() {
+        let user = document.getElementById("user").value;
+        let pass = document.getElementById("pw").value;
+
+        let kosong = ('masukkan user dan pw nya dulu bos Q')
+        
+
+            if (user == 'halo' && pass == 'word') {
+                window.location.href = 'learn_js.html' ;
+            }
+            
+            else if (user == '' && pass == '') {
+                alert(kosong)
+            }
+
+            else{
+                document.getElementById('user').value = '';
+                document.getElementById('pw').value = '';
+              document.getElementById('pesan').style.display = "block";
+            }
+
+
+
+         }
+
+         function pesan() {
+            document.getElementById('pesan').style.display = 'none';
+         }
+
+       
+    </script>
+</body>
+</html>
