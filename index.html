@@ -21,7 +21,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            box-shadow: rgba(0, 0, 0, 0.267) 0px 0px 2px 2px;
+            box-shadow: rgba(0, 0, 0, 0.966) 0px 10px 20px 7px;
             width: 250px;
             padding: 20px;
             background-color: rgba(34, 88, 136, 0.116);
@@ -71,6 +71,20 @@
 
         #id, #user {
             border-radius: 5px;
+        }
+
+        #tanya {
+            animation: tandatanya 0.5s  ease-in alternate infinite;
+        }
+
+        @keyframes tandatanya {
+            from{
+                transform: translateY(-10px);
+            }
+
+            to{
+                transform: translateY(10px);
+            }
         }
         
         
